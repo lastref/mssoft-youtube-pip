@@ -1,0 +1,21 @@
+{
+  "extName": { "message": "YouTube için Pencere İçinde Pencere" },
+  "extDescription": { "message": "YouTube oynatıcısına native görünümlü bir pencere içinde pencere butonu ekler. Videoyu diğer sekmelerin ve uygulamaların üstünde duran bir pencerede izleyin." },
+  "popupSubtitle": { "message": "YouTube için her zaman üstte pencere" },
+  "buttonStyle": { "message": "Oynatıcı butonu" },
+  "styleNative": { "message": "YouTube" },
+  "stylePopout": { "message": "Dışarı aç" },
+  "styleFloat": { "message": "Yüzen" },
+  "styleDetach": { "message": "Ayır" },
+  "seekStep": { "message": "İleri / geri atlama" },
+  "seconds": { "message": "$N$ sn", "placeholders": { "n": { "content": "$1" } } },
+  "hotkey": { "message": "Klavye kısayolu" },
+  "hotkeyHint": { "message": "YouTube'da P tuşuyla aç / kapat" },
+  "autoPip": { "message": "Sekme değiştirince aç" },
+  "autoPipHint": { "message": "Deneysel · Chrome'un otomatik pencere içinde pencere özelliğini kullanır" },
+  "footer": { "message": "Pencereyi istediğin yere sürükle, kenarlarından büyütüp küçült." },
+  "fullscreenApps": { "message": "Tam ekran uygulamalar" },
+  "pauseWhenHidden": { "message": "Tam ekran uygulama pencereyi gizleyince duraklat" },
+  "pauseWhenHiddenHint": { "message": "Pencere yeniden görünür olunca kaldığı yerden sürer" },
+  "fullscreenAppsNote": { "message": "macOS, tarayıcı pencerelerini başka bir uygulamanın tam ekran alanı üzerinde göstermez; video orada görünmeden oynamaya devam eder. İpucu: uygulamaları Tam Ekran yerine Doldur (⌥ + yeşil düğme) ile büyütürsen pencere üstte kalır." }
+}

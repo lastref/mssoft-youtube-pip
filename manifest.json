@@ -1,0 +1,66 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "short_name": "YT PiP",
+  "description": "__MSG_extDescription__",
+  "version": "1.1.0",
+  "homepage_url": "https://github.com/lastref/mssoft-youtube-pip",
+  "default_locale": "en",
+  "minimum_chrome_version": "116",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "__MSG_extName__",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://www.youtube-nocookie.com/embed/*"
+      ],
+      "js": [
+        "src/content/main-world.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://www.youtube-nocookie.com/embed/*"
+      ],
+      "js": [
+        "src/content/shared.js",
+        "src/content/icons.js",
+        "src/content/i18n.js",
+        "src/content/pip-styles.js",
+        "src/content/pip-window.js",
+        "src/content/content.js"
+      ],
+      "css": [
+        "src/content/page.css"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

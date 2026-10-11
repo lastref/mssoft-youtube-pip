@@ -1,0 +1,20 @@
+{
+  "name": "mssoft-youtube-pip",
+  "version": "1.1.0",
+  "description": "Picture-in-Picture for YouTube — native-looking player button, always-on-top Document PiP window. Chrome extension by MSSOFT.",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "MSSOFT",
+  "homepage": "https://github.com/lastref/mssoft-youtube-pip",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lastref/mssoft-youtube-pip.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "package": "node scripts/package.js"
+  }
+}

@@ -1,0 +1,140 @@
+/* Styles injected into youtube.com. The button itself inherits everything
+   from YouTube's .ytp-button rules; only the extras live here. */
+
+.ytpip-button {
+  color: #fff;
+}
+.ytpip-button svg {
+  pointer-events: none;
+}
+
+/* ---------- placeholder while the video plays in the PiP window ---------- */
+/* z-index: above .html5-video-container (10), below the spinner (18),
+   gradients (24/25) and the control bar (59). */
+.ytpip-placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+  font-family: "YouTube Noto", Roboto, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.ytpip-placeholder-bg {
+  position: absolute;
+  inset: -24px;
+  background-position: center;
+  background-size: cover;
+  filter: blur(20px) brightness(.4) saturate(1.1);
+}
+.ytpip-placeholder-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  color: #fff;
+  text-align: center;
+}
+.ytpip-placeholder-content > svg {
+  width: 48px;
+  height: 48px;
+  opacity: .9;
+}
+.ytpip-placeholder-text {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+}
+.ytpip-placeholder-btn {
+  height: 36px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .1);
+  color: #fff;
+  font: 500 14px/36px "YouTube Noto", Roboto, Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background-color .2s cubic-bezier(.05, 0, 0, 1);
+}
+.ytpip-placeholder-btn:hover {
+  background: rgba(255, 255, 255, .2);
+}
+.ytpip-placeholder-btn:focus-visible {
+  outline: 2px solid rgba(27, 127, 204, .8);
+  outline-offset: 2px;
+}
+.ytp-big-mode .ytpip-placeholder-content > svg { width: 64px; height: 64px; }
+.ytp-big-mode .ytpip-placeholder-text { font-size: 20px; line-height: 28px; }
+/* tiny players (e.g. YouTube's own miniplayer) */
+.ytp-small-mode .ytpip-placeholder-btn,
+.ytp-small-mode .ytpip-placeholder-text { display: none; }
+
+/* YouTube's own video-area overlays are meaningless while the video is away */
+.ytpip-away .ytp-spinner,
+.ytpip-away .ytp-cued-thumbnail-overlay {
+  display: none !important;
+}
+
+/* ---------- fallbacks ---------- */
+.ytpip-fallback-tooltip {
+  position: absolute;
+  z-index: 1003;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 9px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, .3);
+  color: #fff;
+  font: 500 12.98px/15px "YouTube Noto", Roboto, Arial, Helvetica, sans-serif;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.ytpip-fallback-kbd {
+  min-width: 11px;
+  padding: 0 2px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 4px;
+  text-align: center;
+}
+.ytpip-toast {
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  z-index: 1004;
+  transform: translateX(-50%);
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: rgba(28, 28, 28, .9);
+  color: #fff;
+  font: 500 13px/18px "YouTube Noto", Roboto, Arial, Helvetica, sans-serif;
+  pointer-events: none;
+}
+
+/* ---------- 2026 embed player (top-right icon row) ---------- */
+.ytpip-embed-wrap {
+  display: contents;
+}
+.ytpip-button.ytpip-embed {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  margin: 0;
+  border: 0;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
+.ytpip-button.ytpip-embed svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}

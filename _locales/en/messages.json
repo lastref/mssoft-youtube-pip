@@ -1,0 +1,21 @@
+{
+  "extName": { "message": "Picture-in-Picture for YouTube" },
+  "extDescription": { "message": "Adds a native-looking picture-in-picture button to the YouTube player. Watch in an always-on-top window over other tabs and apps." },
+  "popupSubtitle": { "message": "Always-on-top window for YouTube" },
+  "buttonStyle": { "message": "Player button" },
+  "styleNative": { "message": "YouTube" },
+  "stylePopout": { "message": "Pop out" },
+  "styleFloat": { "message": "Floating" },
+  "styleDetach": { "message": "Detach" },
+  "seekStep": { "message": "Skip buttons" },
+  "seconds": { "message": "$N$ s", "placeholders": { "n": { "content": "$1" } } },
+  "hotkey": { "message": "Keyboard shortcut" },
+  "hotkeyHint": { "message": "Press P on YouTube to open or close" },
+  "autoPip": { "message": "Open when switching tabs" },
+  "autoPipHint": { "message": "Experimental · uses Chrome's automatic picture-in-picture" },
+  "footer": { "message": "Drag the window anywhere, resize it from its edges." },
+  "fullscreenApps": { "message": "Full-screen apps" },
+  "pauseWhenHidden": { "message": "Pause while a full-screen app hides the window" },
+  "pauseWhenHiddenHint": { "message": "Resumes as soon as the window is visible again" },
+  "fullscreenAppsNote": { "message": "macOS never shows a browser window over another app's full-screen space, so the video keeps playing out of sight there. Tip: enlarge apps with Fill (⌥ + green button) instead of Full Screen and the window stays on top." }
+}
